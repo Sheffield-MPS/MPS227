@@ -25,18 +25,22 @@ layout: 'layouts/practical.html'
 
             <h5>The Data</h5>
             <p>You will need a <strong>copy</strong> of the data. The data files can be found using Windows Explorer at
-                <kbd>ThisPC/shared/Student/PHY_Share/Public/MPS227/SZLyn</kbd>. There are 427 images of SZ Lyn, taken
+                <kbd>ThisPC/shared/Student/PHY_Share/Public/PHY241/SZLyn</kbd>. There are 427 images of SZ Lyn, taken
                 over several hours. Each image is stored in a file format called FITS format, and end in the .fit
                 extension. FITS format is the standard image format for astronomical data. Inside one file is both the
                 image, and a <strong>header</strong>, which contains metadata about the image - such as when it was
                 taken, and what filter the data was taken in.
             </p>
-            <p><strong>Do not copy</strong> the SZ Lyn FITS files to your shared folders (U: drive). The data is nearly
-                half a gigabyte, and will fill your allocation of networked drive space! </p>
-            <p>Instead, copy the SZ Lyn folder to C:/MyFolder/phxxxx, where "phyxxx" is your University username. This
-                copies the files to the hard drive of the machine you are sitting in front of, for rapid access.
-                <strong>You MUST delete anything you place in this directory at the end of the session</strong>.
-            </p>
+            <!-- task 0 -->
+            <div class="callout primary">
+                <p><strong>Task 0:</strong> Get the data.</p>
+                <p><strong>Do not copy</strong> the SZ Lyn FITS files to your shared folders (U: drive). The data is nearly
+                    half a gigabyte, and will fill your allocation of networked drive space! </p>
+                <p>Instead, copy the SZ Lyn folder to C:/MyFolder/phxxxx, where "phyxxx" is your University username. This
+                    copies the files to the hard drive of the machine you are sitting in front of, for rapid access.
+                    <strong>You MUST delete anything you place in this directory at the end of the session</strong>.
+                </p>
+            </div>
 
             <h5>The Software</h5>
             <p>Instructions for installing AstroImageJ are below. Should you ever want to download a copy for your own
@@ -46,14 +50,14 @@ layout: 'layouts/practical.html'
                     href="http://www.astro.louisville.edu/software/astroimagej/guide/AstroImageJ_User_Guide_2.1.4.pdf">here</a>.
                 If you encounter difficulty, or do not understand a setting, <strong>check the manual</strong>.</p>
 
-            <!-- task 0 -->
+            <!-- task 1 -->
             <div class="callout primary">
-                <p><strong>Task 0:</strong> Install AstroImageJ. Using Windows Explorer, copy the ZIP file
+                <p><strong>Task 1:</strong> Install AstroImageJ. Using Windows Explorer, copy the ZIP file
                     fromAstroImageJ\AstroImageJ.exe
                     <kbd>ThisPC/shared/Student/PHY_Share/Public</kbd> , and save it on your computer. Locate the file in
                     Windows Explorer, right-click and choose <kbd>"Extract All"</kbd>. This will create a folder
                     starting with AstroImageJ. Inside that folder is <strong>another</strong> folder called AstroImageJ.
-                    You can run the program by double-clicking on <kbd>AstroImageJ\AstroImageJ.exe</kbd>.
+                    You can run the program by double-clicking on <kbd>AstroImageJ\ij.jar</kbd>.
                 </p>
                 <p><strong>Note:</strong> You may get several windows asking for permission to run the program. Click
                     "OK" to these. If you get a window requesting permission for AstroImageJ to get through a
@@ -61,9 +65,10 @@ layout: 'layouts/practical.html'
                 </p>
             </div>
 
-            <!-- task 1 -->
+            <!-- task 2 -->
             <div class="callout primary">
-                <p>Task 1: Open AstroImageJ. You are presented with the main window, as seen in {%figref "aij_mw" %}.
+                <p><strong>Task 2:</strong> Open AstroImageJ. You are presented with the main window, as seen in
+                    {%figref "aij_mw" %}.
                     Load all of our images by choosing <kbd>File > Import > Image Sequence...</kbd> Navigate to the
                     folder that contains all the .fit images, select one, and click <kbd>Open</kbd>.</p>
                 <p>You will be presented with a second window presenting options for loading an image sequence. Here it
@@ -110,7 +115,7 @@ layout: 'layouts/practical.html'
 
         <div class="cell">
             <div class="callout primary">
-                <p><strong>Task 2:</strong> Align the images by choosing <kbd>Process > Align stack using WCS or
+                <p><strong>Task 3:</strong> Align the images by choosing <kbd>Process > Align stack using WCS or
                         apertures...</kbd> This brings up the stack aligner window (figure 3). Make sure the <kbd>Use
                         previous N apertures</kbd> box and the <kbd>Align only to whole pixels boxes</kbd> are
                     unchecked. Make sure the <kbd>Show help panel box</kbd> is checked.</p>
@@ -147,7 +152,7 @@ layout: 'layouts/practical.html'
                 however, we need to know how large to make our object apertures, and the inner and outer radius of our
                 sky annulus. To do that we need to know what the FWHM of the stars in our image is.</p>
             <div class="callout primary">
-                <p>Task 3: In the photometry window, click on a star, then choose <kbd>Analyze > Plot Seeing
+                <p>Task 4: In the photometry window, click on a star, then choose <kbd>Analyze > Plot Seeing
                         Profile...</kbd> You should end up with a plot like {%figref "aij_seeing_prof" %}. Based upon
                     this plot, decide how large you want your aperture sizes to be.</p>
                 <p>You will need to consider what effect using an aperture that is too small, or one that is too large,
@@ -169,7 +174,7 @@ layout: 'layouts/practical.html'
 
         <div class="cell">
             <div class="callout primary">
-                <p><strong>Task 4:</strong> Open the Multi-Aperture photometry tool by choosing <kbd>Analyze >
+                <p><strong>Task 5:</strong> Open the Multi-Aperture photometry tool by choosing <kbd>Analyze >
                         Multi-aperture...</kbd> Set the radius of the object aperture, and the inner and outer radii of
                     the background annulus to the values chosen earlier. </p>
                 <p>Make sure the various options boxes are marked as indicated in {%figref "aij_aps" %}, and click
@@ -232,7 +237,7 @@ layout: 'layouts/practical.html'
 
         <div class="cell">
             <div class="callout primary">
-                <p>Task 5: Save your data to a Tab-Separated Values text file by clicking in the <kbd>Measurements</kbd>
+                <p>Task 6: Save your data to a Tab-Separated Values text file by clicking in the <kbd>Measurements</kbd>
                     window and choosing <kbd>File > Save As...</kbd> </p>
                 <p>You have two options to make a plot from the data in this file. You can use Excel, or upload the
                     saved file to CoCalc and plot it using Python. If you choose the latter route, you will find the
@@ -279,7 +284,7 @@ layout: 'layouts/practical.html'
             <p>However, we can fix the second problem.</p>
 
             <div class="callout primary">
-                <p><strong>Task 6:</strong> Re-run your aperture photometry with a few different aperture sizes, and
+                <p><strong>Task 7:</strong> Re-run your aperture photometry with a few different aperture sizes, and
                     save the results. You will need to <kbd>Clear</kbd> the Measurements table each time. Leave the sky
                     annulus unchanged for now, and simply change the object aperture radius.</p>
                 <p>For your new measurements plot <strong>JD</strong> vs <strong>rel_flux_T1</strong> in each case. Try
